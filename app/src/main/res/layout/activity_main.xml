@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    style="@style/mainpage"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_back"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/bar_layout"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/timeline"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/background_gradient"
+                android:layout_below="@id/toolbar"
+                android:padding="16dp"
+                android:layout_height="150dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stay Home"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+
+
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_below="@+id/timeline"
+                android:onClick="data"
+                android:layout_marginTop="-60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                app:cardCornerRadius="14dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:weightSum="3"
+                    android:padding="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INDIA"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Confirmed"
+                            android:textSize="15dp"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/con"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1,11,602"
+                            android:textSize="18dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/holo_red_dark"/>
+                        <TextView
+                            android:id="@+id/conn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+5,121"
+                            android:textSize="15dp"
+                            android:visibility="invisible"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/holo_red_dark"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tamil Nadu"
+                            android:visibility="invisible"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Recovered"
+                            android:textSize="15dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/rec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="45,216"
+                            android:textSize="18dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                        <TextView
+                            android:id="@+id/recc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+2,907"
+                            android:visibility="invisible"
+                            android:textSize="15dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/holo_green_dark"/>
+
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tamil Nadu"
+                            android:visibility="invisible"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deceased"
+                            android:textSize="15dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/dec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3,426"
+                            android:textSize="18dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:id="@+id/decc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+124"
+                            android:visibility="invisible"
+                            android:textSize="15dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/helpline"
+                android:orientation="horizontal"
+                android:layout_below="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/help_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Call Helpline"/>
+                <ImageView
+                    android:id="@+id/help_img"
+                    android:layout_width="22dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:layout_toRightOf="@+id/help_text"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_call"/>
+                <TextView
+                    android:id="@+id/dail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/help_img"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:textSize="18dp"
+                    android:text="1075"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/display_items"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/helpline">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="10dp"
+                            android:onClick="card1"
+                            app:cardElevation="2dp">
+
+                            <include layout="@layout/card_polaroid_1" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:onClick="card2"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <include layout="@layout/card_polaroid_2" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:onClick="card3"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <include layout="@layout/card_polaroid_3" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <include layout="@layout/card_polaroid_4" />
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:onClick="card5"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <include layout="@layout/card_polaroid_5" />
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="2dp">
+
+                            <include layout="@layout/card_polaroid_6" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </HorizontalScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/take_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_below="@+id/display_items"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
+                <TextView
+                    android:id="@+id/test_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Self-Assessment"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/display_items"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/test_mess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If you have a fever, cough and difficulty breathing, seek medical attention and take self-assessement in app"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <Button
+                    android:id="@+id/testme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/background_button"
+                    android:text="Test Me "/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/what_covid"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="215dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/display_items"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="What Is COVID-19?"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/display_items"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="A coronavirus is a kind of common virus that causes an infection in your nose, sinuses, or upper throat. Most coronaviruses aren't dangerous.COVID-19 is a disease that can cause what doctors call a respiratory tract infection. It can affect your upper respiratory tract (sinuses, nose, and throat) or lower respiratory tract (windpipe and lungs). It's caused by a coronavirus named SARS-CoV-2."
+                    android:layout_below="@+id/title"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/black"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/safety"
+                android:layout_below="@+id/what_covid"
+                android:orientation="horizontal">
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/wash_hands"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardElevation="2dp">
+
+                    <TextView
+                        android:id="@+id/tit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Steps should be followed"
+                        android:textStyle="bold"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/black"/>
+
+                    <LinearLayout
+                        android:id="@+id/id_stay"
+                        android:layout_marginTop="60dp"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/img12"
+                            android:layout_width="150dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/image_border"
+                            android:src="@drawable/stayhome"
+                            android:layout_height="150dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stay home and self-isolate even with minor symptoms such as cough, headache, mildfever, until you recover"
+                            android:textSize="18dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"/>
+
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="230dp"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="150dp"
+                            android:background="@drawable/image_border"
+                            android:src="@drawable/social"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="150dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_toLeftOf="@+id/img1"
+                            android:text=" Maintain at least 1 metre (3 feet) distance between yourself and others.Avoid going to crowded places."
+                            android:textSize="18dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@android:color/black"
+                            tools:ignore="RtlCompat" />
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/id_wash"
+                        android:layout_marginTop="400dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="150dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/image_border"
+                            android:src="@drawable/wash"
+                            android:layout_height="150dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Regularly and thoroughly clean your hands with an alcohol-based hand rub or washthem with soap and water."
+                            android:textSize="18dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"/>
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/note"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/safety"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If you have a fever, cough and difficulty breathing, seek medical attention and take self-assessement in app"
+                    android:textSize="22dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="italic"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/com_logo"
+                android:layout_below="@+id/note"
+                android:layout_width="60dp"
+                android:layout_centerInParent="true"
+                android:layout_height="60dp"
+                android:src="@drawable/logo_centre"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V 1.2"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/com_logo"
+                android:layout_centerInParent="true"/>
+
+            <LinearLayout
+                android:layout_below="@+id/com_logo"
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:weightSum="3"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/com_logo_1"
+                    android:layout_below="@+id/note"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_height="40dp"
+                    android:src="@drawable/fb"/>
+                <ImageView
+                    android:id="@+id/com_logo_2"
+                    android:layout_below="@+id/note"
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_height="40dp"
+                    android:src="@drawable/instagram"/>
+                <ImageView
+                    android:id="@+id/com_logo_3"
+                    android:layout_below="@+id/note"
+                    android:layout_weight="1"
+                    android:layout_width="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="40dp"
+                    android:src="@drawable/twitter"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

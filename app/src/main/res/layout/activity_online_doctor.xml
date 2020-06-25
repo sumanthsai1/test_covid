@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnlineDoctorAppoinment.OnlineDoctor">
+
+
+    <include
+        android:id="@+id/onlinedoc_bar"
+        layout="@layout/online_doctor_bar"/>
+
+    <ScrollView
+        android:layout_below="@+id/onlinedoc_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_local_hospital_black_24dp"
+                android:id="@+id/im"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/im"
+                android:text="Online Doctor Appoinment"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/im"
+                android:id="@+id/username"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                app:met_floatingLabel="normal"
+                android:hint="Patient Name"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                android:layout_below="@+id/username"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="20dp"
+                app:met_floatingLabel="normal"
+                android:hint="Email"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/password"
+                android:gravity="center"
+                android:layout_below="@+id/email"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                app:met_floatingLabel="normal"
+                android:hint="Age"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/password"
+                android:layout_below="@+id/email"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                app:met_floatingLabel="normal"
+                android:hint="Date of Birth"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/email"
+                android:layout_toRightOf="@+id/date"
+                android:src="@drawable/calender"
+                android:id="@+id/calender"/>
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/date"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im"
+                    android:layout_marginLeft="20dp"
+                    android:text="Gender"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="Male"
+                    android:textColor="#154"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:text="Female"
+                    android:textColor="#154"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/radio"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                tools:ignore="NotSibling" />
+            <TextView
+                android:id="@+id/selected_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/im"
+                android:layout_marginLeft="20dp"
+                android:text="Gender"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/selected_symp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/im"
+                android:layout_marginLeft="20dp"
+                android:text="Gender"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner"
+                android:id="@+id/mobile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                app:met_floatingLabel="normal"
+                android:hint="Phone Number"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/address"
+                android:layout_below="@+id/mobile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="20dp"
+                app:met_floatingLabel="normal"
+                android:hint="Mention your address here"/>
+
+            <Button
+                android:id="@+id/appoinment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_button"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                android:text="Make Appoinment"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
