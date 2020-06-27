@@ -9,42 +9,15 @@
     </include>
 
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/TF_location"
-        android:layout_width="290dp"
-        android:layout_height="45dp"
-        android:layout_below="@+id/medical_bar"
-        android:ems="10"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_centerInParent="true"
-        android:inputType="textPersonName"
-        android:hint="Enter Shop Name" />
-
-    <Button
-        android:id="@+id/B_search"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
-        android:layout_below="@id/TF_location"
-        android:background="@drawable/background_button"
-        android:textColor="@android:color/white"
-        android:onClick="onClick"
-        android:text="Search"
-        android:textStyle="bold" />
-
-
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/map"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/B_search"
+        android:layout_below="@+id/medical_bar"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         tools:context=".MedicalStores.MedicalStoresActivity"
@@ -53,11 +26,12 @@
     <Button
         android:id="@+id/B_medical_shops"
         android:layout_width="110dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_height="45sp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="10dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/TF_location"
+        android:layout_below="@+id/medical_bar"
+
         android:background="@drawable/background_button"
         android:textColor="@android:color/white"
         android:onClick="onClick"

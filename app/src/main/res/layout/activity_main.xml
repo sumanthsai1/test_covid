@@ -29,20 +29,8 @@
                 android:orientation="vertical"
                 android:background="@drawable/background_gradient"
                 android:layout_below="@id/toolbar"
-                android:padding="16dp"
-                android:layout_height="150dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Stay Home"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"/>
-
-
-
-            </LinearLayout>
+                android:padding="10dp"
+                android:layout_height="90dp"/>
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view"
                 android:layout_below="@+id/timeline"
@@ -57,50 +45,56 @@
                 app:cardCornerRadius="14dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:background="@color/colorPrimaryDark"
+
+                    android:orientation="horizontal"
                     android:padding="10dp"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:weightSum="5">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:text="INDIA"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
                             android:textColor="@android:color/black"
-                            android:layout_marginTop="10dp" />
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Confirmed"
-                            android:textSize="15dp"
                             android:layout_marginTop="3dp"
-                            android:textColor="@android:color/black"/>
+                            android:text="Confirmed"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/con"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1,11,602"
-                            android:textSize="18dp"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/holo_red_dark"/>
+                            android:text="1,11,602"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="18dp" />
+
                         <TextView
                             android:id="@+id/conn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="+5,121"
-                            android:textSize="15dp"
-                            android:visibility="invisible"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/holo_red_dark"/>
+                            android:text="+5,121"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="15dp"
+                            android:visibility="invisible" />
 
                     </LinearLayout>
 
@@ -108,86 +102,91 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:text="Tamil Nadu"
-                            android:visibility="invisible"
+                            android:textColor="@android:color/black"
                             android:textSize="15dp"
                             android:textStyle="bold"
-                            android:textColor="@android:color/black"
-                            android:layout_marginTop="10dp" />
+                            android:visibility="invisible" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Recovered"
-                            android:textSize="15dp"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/black"/>
+                            android:text="Recovered"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/rec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="45,216"
-                            android:textSize="18dp"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/holo_green_dark"/>
+                            android:text="45,216"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="18dp" />
+
                         <TextView
                             android:id="@+id/recc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="+2,907"
-                            android:visibility="invisible"
-                            android:textSize="15dp"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/holo_green_dark"/>
-
-
+                            android:text="+2,907"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="15dp"
+                            android:visibility="invisible" />
 
 
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:padding="10dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:text="Tamil Nadu"
-                            android:visibility="invisible"
+                            android:textColor="@android:color/black"
                             android:textSize="15dp"
                             android:textStyle="bold"
-                            android:textColor="@android:color/black"
-                            android:layout_marginTop="10dp" />
+                            android:visibility="invisible" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Deceased"
-                            android:textSize="15dp"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/black"/>
+                            android:text="Deceased"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/dec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="3,426"
-                            android:textSize="18dp"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/black"/>
+                            android:text="3,426"
+                            android:textColor="@android:color/black"
+                            android:textSize="18dp" />
+
                         <TextView
                             android:id="@+id/decc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="+124"
-                            android:visibility="invisible"
-                            android:textSize="15dp"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/black"/>
+                            android:text="+124"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp"
+                            android:visibility="invisible" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -205,45 +204,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/help_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="30dp"
-                    android:visibility="invisible"
-                    android:textColor="@android:color/holo_blue_light"
-                    android:textStyle="bold"
-                    android:textSize="18dp"
-                    android:text="Call Helpline"/>
-                <ImageView
-                    android:id="@+id/help_img"
-                    android:layout_width="22dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_gravity="center"
-                    android:visibility="invisible"
-                    android:layout_toRightOf="@+id/help_text"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_call"/>
-                <TextView
-                    android:id="@+id/dail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/help_img"
-                    android:layout_gravity="center"
-                    android:visibility="invisible"
-                    android:textSize="18dp"
-                    android:text="1075"/>
 
             </RelativeLayout>
 
             <HorizontalScrollView
                 android:id="@+id/display_items"
+                android:layout_below="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/helpline">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -343,9 +313,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:layout_below="@+id/display_items"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp">
@@ -371,7 +342,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="20dp"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:textColor="@color/colorWhite"/>
 
                 <Button
                     android:id="@+id/testme"
@@ -395,7 +366,7 @@
                 android:layout_width="wrap_content"
                 android:padding="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="215dp"
+                android:layout_marginTop="220dp"
                 android:layout_marginRight="10dp"
                 android:layout_below="@+id/display_items"
                 android:layout_height="wrap_content"
@@ -599,52 +570,17 @@
                 android:layout_below="@+id/note"
                 android:layout_width="60dp"
                 android:layout_centerInParent="true"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:src="@drawable/logo_centre"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="V 1.2"
+                android:textSize="20dp"
                 android:textColor="@android:color/black"
                 android:layout_below="@+id/com_logo"
                 android:layout_centerInParent="true"/>
 
-            <LinearLayout
-                android:layout_below="@+id/com_logo"
-                android:layout_width="match_parent"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="30dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:weightSum="3"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                    android:id="@+id/com_logo_1"
-                    android:layout_below="@+id/note"
-                    android:layout_width="40dp"
-                    android:layout_weight="1"
-                    android:layout_centerInParent="true"
-                    android:layout_height="40dp"
-                    android:src="@drawable/fb"/>
-                <ImageView
-                    android:id="@+id/com_logo_2"
-                    android:layout_below="@+id/note"
-                    android:layout_width="40dp"
-                    android:layout_weight="1"
-                    android:layout_centerInParent="true"
-                    android:layout_height="40dp"
-                    android:src="@drawable/instagram"/>
-                <ImageView
-                    android:id="@+id/com_logo_3"
-                    android:layout_below="@+id/note"
-                    android:layout_weight="1"
-                    android:layout_width="40dp"
-                    android:layout_centerInParent="true"
-                    android:layout_height="40dp"
-                    android:src="@drawable/twitter"/>
-
-            </LinearLayout>
 
         </RelativeLayout>
 

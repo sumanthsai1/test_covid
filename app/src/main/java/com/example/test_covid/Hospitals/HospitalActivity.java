@@ -152,37 +152,6 @@ public class HospitalActivity extends FragmentActivity implements OnMapReadyCall
 
         switch(v.getId())
         {
-            case R.id.B_search:
-                EditText tf_location =  findViewById(R.id.TF_location);
-                String location = tf_location.getText().toString();
-                List<Address> addressList;
-
-
-                if(!location.equals(""))
-                {
-                    Geocoder geocoder = new Geocoder(this);
-
-                    try {
-                        addressList = geocoder.getFromLocationName(location, 5);
-
-                        if(addressList != null)
-                        {
-                            for(int i = 0;i<addressList.size();i++)
-                            {
-                                LatLng latLng = new LatLng(addressList.get(i).getLatitude() , addressList.get(i).getLongitude());
-                                MarkerOptions markerOptions = new MarkerOptions();
-                                markerOptions.position(latLng);
-                                markerOptions.title(location);
-                                mMap.addMarker(markerOptions);
-                                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                                mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-                            }
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                break;
             case R.id.B_hospitals:
                 mMap.clear();
                 String hospital = "hospital";
@@ -206,7 +175,7 @@ public class HospitalActivity extends FragmentActivity implements OnMapReadyCall
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
         googlePlaceUrl.append("&type="+nearbyPlace);
         googlePlaceUrl.append("&sensor=true");
-        googlePlaceUrl.append("&key="+"AIzaSyAw4RboRtiq_v2xyBBW2HvuWnv9_QUvTPM");
+        googlePlaceUrl.append("&key="+"AIzaSyCgCG2DE-z0TnW0zizCwGEnyDN4kLk64YI");
 
         Log.d("MapsActivity", "url = "+googlePlaceUrl.toString());
 

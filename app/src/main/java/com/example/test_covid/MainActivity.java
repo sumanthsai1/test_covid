@@ -108,15 +108,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 startActivity(new Intent(MainActivity.this,MapsActivity.class));
             }
         });
-
-
-
         fetchData();
-
-
-
-
-
     }
 
     private void fetchData() {
@@ -134,18 +126,9 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             tvCases.setText(jsonObject.getString("cases"));
                             tvRecovered.setText(jsonObject.getString("recovered"));
                             tvTotalDeaths.setText(jsonObject.getString("deaths"));
-
-
-
-
-
-
-
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
-
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -156,16 +139,14 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
-
     }
-
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId())
         {
             case R.id.profile:
-                Toast.makeText(this, "profile", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,profile.class));
                 return true;
             case R.id.aboutus:
                 openaboutapp();
