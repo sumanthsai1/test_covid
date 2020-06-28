@@ -30,7 +30,6 @@ public class DataActivity extends AppCompatActivity {
     SimpleArcLoader simpleArcLoader;
     ScrollView scrollView;
     PieChart pieChart;
-
     ImageView back;
 
     @Override

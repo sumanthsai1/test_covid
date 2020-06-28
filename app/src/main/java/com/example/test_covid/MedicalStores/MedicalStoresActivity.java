@@ -175,7 +175,7 @@ public class MedicalStoresActivity extends FragmentActivity implements OnMapRead
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
         googlePlaceUrl.append("&type="+nearbyPlace);
         googlePlaceUrl.append("&sensor=true");
-        googlePlaceUrl.append("&key="+"AIzaSyCgCG2DE-z0TnW0zizCwGEnyDN4kLk64YI");
+        googlePlaceUrl.append("&key="+"AIzaSyBGfXtKdiyJsTLncbM_kuYBwN4I04RbT_U");
 
         Log.d("MapsActivity", "url = "+googlePlaceUrl.toString());
 

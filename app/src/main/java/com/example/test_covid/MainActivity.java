@@ -27,14 +27,17 @@ import com.example.test_covid.Model.About_dialog;
 import com.example.test_covid.OnlineDoctorAppoinment.OnlineDoctor;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     ImageView menu;
-
+    private String status;
     private static final int REQUEST_CALL=1;
     private static final int MAKE_CALL_PERMISSION_REQUEST_CODE=1;
 
@@ -51,13 +54,18 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
     public static Button test;
 
-    DatabaseReference reference;
+    DatabaseReference databaseReference;
+    FirebaseDatabase firebaseDatabase;
+    FirebaseAuth auth;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        auth=FirebaseAuth.getInstance();
+        firebaseDatabase= FirebaseDatabase.getInstance();
 
         title=findViewById(R.id.invisible_title);
         back=findViewById(R.id.back);
@@ -111,10 +119,30 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         fetchData();
     }
 
+    public void status(String status){
+        databaseReference = firebaseDatabase.getReference("Users").child(auth.getUid());
+
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("status",status);
+        databaseReference.updateChildren(hashMap);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        status("online");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        status("offline");
+    }
+
     private void fetchData() {
         String url  = "https://corona.lmao.ninja/v2/countries/india";
 
-
+        status="Online";
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
